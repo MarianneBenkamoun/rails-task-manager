@@ -1,7 +1,10 @@
-<%= link _to"Add a new task", new_task_path %>
+<h1>Les restaurants </h1>
+
+<%= link_to "newtask", new_task_path %>
 <% @tasks.each do |task| %>
   <h2><%= task.description %></h2>
-<%= link _to"allezvoir", task_path(id:task.id) %>
+<%= link_to"allezvoir", task_path(task) %>
+<%= link_to"modify", edit_task_path(task) %>
 <%= link_to"Delete", task_path(task),
       method: :delete,
       data: { confirm: "Are you sure?" } %>
