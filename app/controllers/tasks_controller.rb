@@ -1,15 +1,15 @@
 class TasksController < ApplicationController
     before_action :set_task, only: [:show, :edit, :update, :destroy]
   def index
-    @tasks = Todolist.all
+    @tasks = Task.all
   end
   def show
   end
   def new
-    @task = Todolist.new
+    @task = Task.new
   end
   def create
-    @task = Todolist.new(task_params)
+    @task = Task.new(task_params)
     @task.save
     redirect_to task_path(@task)
   end
@@ -31,7 +31,7 @@ class TasksController < ApplicationController
   end
 
 def set_task
-  @task = Todolist.find(params[:id])
+  @task = Task.find(params[:id])
 end
 
 

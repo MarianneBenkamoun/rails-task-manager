@@ -1,4 +1,4 @@
-Todolist.create(description:'faire la lessive')
-Todolist.create(description:'sortir le chien')
-Todolist.create(description:'voir maman')
+Task.create(description:'faire la lessive')
+Task.create(description:'sortir le chien')
+Task.create(description:'voir maman')
 
